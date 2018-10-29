@@ -208,6 +208,7 @@ footer .instagramLogo {
 footer div a:not(.instagram) {
     display: block;
     vertical-align: middle;
+    padding-bottom: 5px;
 }
 
 footer div a,
@@ -224,7 +225,7 @@ footer address {
 
 
 /* DESKTOP ============================================================================================== */
-@media screen and (min-width: 401px) {
+@media screen and (min-width: 601px) {
     .desktop {
         display: block;
     }
@@ -233,7 +234,7 @@ footer address {
         display: block;
         margin: 0;
         width: 15vw;
-        padding: 12px 0 10px;
+        padding: 16px 0 10px;
         color: #FFFFFF;
         background-color: #7E84FA;
         text-align: center;
@@ -483,16 +484,13 @@ footer address {
     }
 
     footer .footerLogo {
-        width: 100px;
+        width: 120px;
+        padding-top:4px;
     }
 
     footer .footerLogoLink {
-        margin: 0 0 0 3vw;
+        margin: 0 0 0 0;
         grid-column: 2/2;
-    }
-
-    footer .footerLogo {
-        width: 100px;
     }
 
     footer a,
@@ -513,7 +511,13 @@ footer address {
 
 /* MOBILE ============================================================================================== */
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 680px) {
+    footer .footerLogo {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 600px) {
     .desktop {
         display: none;
     }
@@ -552,7 +556,7 @@ footer address {
     a.button {
         margin: 0 auto;
         width: 50vw;
-        padding: 12px 0 10px;
+        padding: 14px 0 10px;
     }
 
     header .headerImg {
