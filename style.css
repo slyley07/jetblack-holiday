@@ -91,7 +91,7 @@ nav {
     display: grid;
     grid-template-columns: repeat(3, auto);
     /* width: 63vw; */
-    width: 28vw;
+    width: 40vw;
     justify-content: space-between;
     margin: 0 auto;
 }
@@ -102,7 +102,6 @@ nav div {
 
 nav .navGift {
     width: 16vw;
-    margin: 0 0 0 -9vw;
 }
 
 nav .navService {
@@ -244,7 +243,7 @@ footer address {
     }
 
     header {
-        background-image: url(./imgs/0_hero_logo.png);
+        background-image: url(./imgs/0_hero.png);
         height: 28vw;
         background-size: 97vw;
         margin: 15px 15px 0 15px;
@@ -341,12 +340,18 @@ footer address {
         font-size: 1.3vw;
         margin: 0 auto 3vw;
         color: #121212;
+        padding-top: 8px;
     }
 
+    
     .giftForm,
     .serviceStuff,
     .iosApp {
         margin: 0 0 15px;
+    }
+
+    ul.list-items li {
+        font-weight: 400;
     }
 
     .form,
@@ -484,7 +489,7 @@ footer address {
     }
 
     footer .footerLogo {
-        width: 120px;
+        width: 150px;
         padding-top:4px;
     }
 
@@ -511,13 +516,16 @@ footer address {
 
 /* MOBILE ============================================================================================== */
 
-@media screen and (max-width: 680px) {
     footer .footerLogo {
         width: 100px;
     }
 }
 
 @media screen and (max-width: 600px) {
+    h1 {
+        font-size: 10vw;
+    }
+
     .desktop {
         display: none;
     }
@@ -593,7 +601,8 @@ footer address {
     }
 
     .secIcon {
-        width: 15vw;
+        width: 13vw;
+        padding-bottom: 20px;
     }
 
     .giftForm h3 {
@@ -606,7 +615,7 @@ footer address {
 
     .giftForm h2 {
         margin: 22px auto;
-        font-size: 8vw;
+        font-size: 6vw;
     }
 
     .giftForm p {
@@ -658,6 +667,7 @@ footer address {
         text-align: center;
     }
 
+
     .holidays h3 {
         font-size: 4vw;
         margin: 30px auto 42px;
@@ -688,6 +698,12 @@ footer address {
         color: #121212;
         font-size: 5vw;
         margin: 0 auto 20px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    .holiday-headline {
+        padding-top: 40px;
     }
 
     .giftWrap {
@@ -763,6 +779,10 @@ footer address {
     .servicing ul li {
         margin: 0 auto 19px;
         font-size: 4vw;
+    }
+
+    ul.list-items li {
+        font-weight: 400;
     }
 
     .iosApp {
