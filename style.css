@@ -138,11 +138,11 @@ header p {
     font-family: Quarto;
 }
 
-.giftForm p {
+.giftForm p:not(.button) {
     font-family: MarkPro;
 }
 
-a.button {
+.button {
     font-family: TradeGothicBdCn;
     display: block;
     color: #FFFFFF;
@@ -229,7 +229,7 @@ footer address {
         display: block;
     }
 
-    a.button {
+    .button {
         display: block;
         margin: 0;
         width: 15vw;
@@ -237,7 +237,7 @@ footer address {
         color: #FFFFFF;
         background-color: #7E84FA;
         text-align: center;
-        font-family: TradeGothic;
+        /* font-family: TradeGothic; */
         font-weight: 700;
         font-size: 1.4vw;
     }
@@ -343,7 +343,7 @@ footer address {
         padding-top: 8px;
     }
 
-    
+
     .giftForm,
     .serviceStuff,
     .iosApp {
@@ -485,7 +485,7 @@ footer address {
         padding: 40px 0 0;
         height: 200px;
         display: grid;
-        grid-template-columns: 10vw 18vw 8vw 15vw 22vw 21vw;
+        grid-template-columns: 10vw 23vw 8vw 15vw 22vw 21vw;
     }
 
     footer .footerLogo {
@@ -511,15 +511,14 @@ footer address {
     .mobile {
         display: none;
     }
+    footer .footerLogo {
+      width: 129px;
+    }
 }
 
 
 /* MOBILE ============================================================================================== */
 
-    footer .footerLogo {
-        width: 100px;
-    }
-}
 
 @media screen and (max-width: 600px) {
     h1 {
@@ -561,7 +560,7 @@ footer address {
         display: inline-block;
     }
 
-    a.button {
+    .button {
         margin: 0 auto;
         width: 50vw;
         padding: 14px 0 10px;

@@ -58,7 +58,6 @@ $(document).ready(function() {
 
 
   setInterval(function() {
-    console.log('runs');
     if (i < 2) {
       i++;
     } else {
