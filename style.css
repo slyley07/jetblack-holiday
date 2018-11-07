@@ -89,10 +89,11 @@ h1, h2, h3, h4, h5, h6, p, ul, li, footer {
 
 nav {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    /* grid-template-columns: repeat(3, auto); */
+    grid-template-columns: repeat(2, auto);
     /* width: 63vw; */
     width: 40vw;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 0 auto;
 }
 
@@ -102,6 +103,7 @@ nav div {
 
 nav .navGift {
     width: 16vw;
+    margin-left: -1px;
 }
 
 nav .navService {
@@ -245,7 +247,7 @@ footer address {
     header {
         background-image: url(./imgs/0_hero.png);
         height: 28vw;
-        background-size: 97vw;
+        background-size: 98vw;
         margin: 15px 15px 0 15px;
         background-repeat: no-repeat;
         padding: 21vw 0 0;
