@@ -145,20 +145,20 @@ header p {
 }
 
 .button {
-    font-family: TradeGothicBdCn;
-    display: block;
-    color: #FFFFFF;
-    background-color: #7E84FA;
-    text-align: center;
-    font-weight: lighter;
-    letter-spacing: 1px;
+  font-family: TradeGothicBdCn;
+  display: block;
+  color: #FFFFFF;
+  background-color: #7E84FA;
+  text-align: center;
+  font-weight: lighter;
+  letter-spacing: 1px;
 }
 
 .holidays h2,
 .giftWrap h2,
 .servicing h2,
 .iosApp h2 {
-    font-family: Quarto;
+  font-family: Quarto;
 }
 
 .holidays .date,
@@ -667,7 +667,6 @@ footer address {
         width: 100vw;
         text-align: center;
     }
-
 
     .holidays h3 {
         font-size: 4vw;
