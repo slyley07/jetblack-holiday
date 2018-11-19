@@ -306,6 +306,10 @@ footer address {
         margin: 0 auto 3vw;
     }
 
+    .holidays .thanksgiving {
+      opacity: 0.4;
+    }
+
     .holidays .thanksgiving,
     .holidays .hanukkah,
     .holidays .xmas {
