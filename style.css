@@ -161,6 +161,11 @@ header p {
   font-family: Quarto;
 }
 
+.holidays .greyedOut {
+  opacity: 0.4;
+}
+
+
 .holidays .date,
 .giftWrap p,
 .servicing p,
@@ -304,10 +309,6 @@ footer address {
     .holidays .holidayIcon {
         width: 6vw;
         margin: 0 auto 3vw;
-    }
-
-    .holidays .thanksgiving {
-      opacity: 0.4;
     }
 
     .holidays .thanksgiving,
@@ -654,11 +655,13 @@ footer address {
         left: 0;
     }
 
-    img.leftie, img.rightie {
+    img.leftie,
+    img.rightie {
         width: 55px;
         height: 55px;
         position: absolute;
         top: 50%;
+        z-index: 1;
     }
 
     .holidays .rightie {

@@ -21,10 +21,30 @@ let json = [
   }
 ]
 
+function holidayGreyer(holiday) {
+  if ('1_thanksgiving_icon' === holiday) {
+    $('.mobile .holidayIcon').addClass('greyedOut');
+    $('.mobile .holidayName').addClass('greyedOut');
+    $('.mobile .eDate').addClass('greyedOut');
+    $('.mobile .lDate').addClass('greyedOut');
+
+    // $('.mobile.thanksgiving').addClass('greyedOut');
+  } else {
+    console.log(holiday);
+    $('.mobile .holidayIcon').removeClass('greyedOut');
+    $('.mobile .holidayName').removeClass('greyedOut');
+    $('.mobile .eDate').removeClass('greyedOut');
+    $('.mobile .lDate').removeClass('greyedOut');
+
+    // $('.mobile.thanksgiving').removeClass('greyedout');
+  }
+}
+
 $(document).ready(function() {
   let i = 0;
 
   $('.rightie').click(function() {
+    console.log('right click');
     if (i < 2) {
       i++;
     } else {
@@ -32,6 +52,8 @@ $(document).ready(function() {
     }
 
     let data = json[i];
+
+    holidayGreyer(data.img);
 
     let image = './imgs/' + data.img + '.png';
     $('.mobile .holidayIcon').attr('src', image);
@@ -41,6 +63,7 @@ $(document).ready(function() {
   })
 
   $('.leftie').click(function() {
+    console.log('left click');
     if (i === 0) {
       i = 2;
     } else {
@@ -48,6 +71,8 @@ $(document).ready(function() {
     }
 
     let data = json[i];
+
+    holidayGreyer(data.img);
 
     let image = './imgs/' + data.img + '.png';
     $('.mobile .holidayIcon').attr('src', image);
@@ -65,6 +90,9 @@ $(document).ready(function() {
     }
     let data = json[i];
 
+    holidayGreyer(data.img);
+
+
     let image = './imgs/' + data.img + '.png';
     $('.mobile .holidayIcon').attr('src', image);
     $('.mobile .holidayName').text(data.name);
@@ -73,8 +101,4 @@ $(document).ready(function() {
 
 
   }, 5000)
-
-  $('.leftie, .rightie').click(function() {
-
-  })
 })
