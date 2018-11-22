@@ -21,30 +21,34 @@ let json = [
   }
 ]
 
-function holidayGreyer(holiday) {
-  if ('1_thanksgiving_icon' === holiday) {
+function holidayGreyer(holidayImg) {
+  if ('1_thanksgiving_icon' === holidayImg) {
     $('.mobile .holidayIcon').addClass('greyedOut');
     $('.mobile .holidayName').addClass('greyedOut');
     $('.mobile .eDate').addClass('greyedOut');
     $('.mobile .lDate').addClass('greyedOut');
-
-    // $('.mobile.thanksgiving').addClass('greyedOut');
   } else {
-    console.log(holiday);
     $('.mobile .holidayIcon').removeClass('greyedOut');
     $('.mobile .holidayName').removeClass('greyedOut');
     $('.mobile .eDate').removeClass('greyedOut');
     $('.mobile .lDate').removeClass('greyedOut');
-
-    // $('.mobile.thanksgiving').removeClass('greyedout');
   }
+}
+
+function changer(data) {
+
+  let image = './imgs/' + data.img + '.png';
+  $('.mobile .holidayIcon').attr('src', image);
+  $('.mobile .holidayName').text(data.name);
+  $('.mobile .eDate').text(data.eDate);
+  $('.mobile .lDate').text(data.lDate);
+  holidayGreyer(data.img);
 }
 
 $(document).ready(function() {
   let i = 0;
 
   $('.rightie').click(function() {
-    console.log('right click');
     if (i < 2) {
       i++;
     } else {
@@ -53,17 +57,17 @@ $(document).ready(function() {
 
     let data = json[i];
 
-    holidayGreyer(data.img);
+    // holidayGreyer(data.img);
 
-    let image = './imgs/' + data.img + '.png';
-    $('.mobile .holidayIcon').attr('src', image);
-    $('.mobile .holidayName').text(data.name);
-    $('.mobile .eDate').text(data.eDate);
-    $('.mobile .lDate').text(data.lDate);
+    // let image = './imgs/' + data.img + '.png';
+    changer(data)
+    // $('.mobile .holidayIcon').attr('src', image);
+    // $('.mobile .holidayName').text(data.name);
+    // $('.mobile .eDate').text(data.eDate);
+    // $('.mobile .lDate').text(data.lDate);
   })
 
   $('.leftie').click(function() {
-    console.log('left click');
     if (i === 0) {
       i = 2;
     } else {
@@ -72,13 +76,14 @@ $(document).ready(function() {
 
     let data = json[i];
 
-    holidayGreyer(data.img);
+    // holidayGreyer(data.img);
+    changer(data)
 
-    let image = './imgs/' + data.img + '.png';
-    $('.mobile .holidayIcon').attr('src', image);
-    $('.mobile .holidayName').text(data.name);
-    $('.mobile .eDate').text(data.eDate);
-    $('.mobile .lDate').text(data.lDate);
+    // let image = './imgs/' + data.img + '.png';
+    // $('.mobile .holidayIcon').attr('src', image);
+    // $('.mobile .holidayName').text(data.name);
+    // $('.mobile .eDate').text(data.eDate);
+    // $('.mobile .lDate').text(data.lDate);
   })
 
 
@@ -90,15 +95,13 @@ $(document).ready(function() {
     }
     let data = json[i];
 
-    holidayGreyer(data.img);
+    // holidayGreyer(data.img);
+    changer(data)
 
-
-    let image = './imgs/' + data.img + '.png';
-    $('.mobile .holidayIcon').attr('src', image);
-    $('.mobile .holidayName').text(data.name);
-    $('.mobile .eDate').text(data.eDate);
-    $('.mobile .lDate').text(data.lDate);
-
-
+    // let image = './imgs/' + data.img + '.png';
+    // $('.mobile .holidayIcon').attr('src', image);
+    // $('.mobile .holidayName').text(data.name);
+    // $('.mobile .eDate').text(data.eDate);
+    // $('.mobile .lDate').text(data.lDate);
   }, 5000)
 })
