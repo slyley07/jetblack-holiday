@@ -22,7 +22,7 @@ let json = [
 ]
 
 function holidayGreyer(holidayImg) {
-  if ('1_thanksgiving_icon' === holidayImg) {
+  if ('1_thanksgiving_icon' === holidayImg || '2_hanukkah_icon' === holidayImg) {
     $('.mobile .holidayIcon').addClass('greyedOut');
     $('.mobile .holidayName').addClass('greyedOut');
     $('.mobile .eDate').addClass('greyedOut');
@@ -36,13 +36,13 @@ function holidayGreyer(holidayImg) {
 }
 
 function changer(data) {
+  holidayGreyer(data.img);
 
   let image = './imgs/' + data.img + '.png';
   $('.mobile .holidayIcon').attr('src', image);
   $('.mobile .holidayName').text(data.name);
   $('.mobile .eDate').text(data.eDate);
   $('.mobile .lDate').text(data.lDate);
-  holidayGreyer(data.img);
 }
 
 $(document).ready(function() {
@@ -57,14 +57,7 @@ $(document).ready(function() {
 
     let data = json[i];
 
-    // holidayGreyer(data.img);
-
-    // let image = './imgs/' + data.img + '.png';
     changer(data)
-    // $('.mobile .holidayIcon').attr('src', image);
-    // $('.mobile .holidayName').text(data.name);
-    // $('.mobile .eDate').text(data.eDate);
-    // $('.mobile .lDate').text(data.lDate);
   })
 
   $('.leftie').click(function() {
@@ -76,14 +69,7 @@ $(document).ready(function() {
 
     let data = json[i];
 
-    // holidayGreyer(data.img);
     changer(data)
-
-    // let image = './imgs/' + data.img + '.png';
-    // $('.mobile .holidayIcon').attr('src', image);
-    // $('.mobile .holidayName').text(data.name);
-    // $('.mobile .eDate').text(data.eDate);
-    // $('.mobile .lDate').text(data.lDate);
   })
 
 
@@ -95,13 +81,6 @@ $(document).ready(function() {
     }
     let data = json[i];
 
-    // holidayGreyer(data.img);
     changer(data)
-
-    // let image = './imgs/' + data.img + '.png';
-    // $('.mobile .holidayIcon').attr('src', image);
-    // $('.mobile .holidayName').text(data.name);
-    // $('.mobile .eDate').text(data.eDate);
-    // $('.mobile .lDate').text(data.lDate);
   }, 5000)
 })
