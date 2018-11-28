@@ -23,15 +23,17 @@ let json = [
 
 function holidayGreyer(holidayImg) {
   if ('1_thanksgiving_icon' === holidayImg || '2_hanukkah_icon' === holidayImg) {
-    $('.mobile .holidayIcon').addClass('greyedOut');
-    $('.mobile .holidayName').addClass('greyedOut');
-    $('.mobile .eDate').addClass('greyedOut');
-    $('.mobile .lDate').addClass('greyedOut');
+    $('.mobile.thanksgiving').addClass('greyedOut');
+    // $('.mobile .holidayIcon').addClass('greyedOut');
+    // $('.mobile .holidayName').addClass('greyedOut');
+    // $('.mobile .eDate').addClass('greyedOut');
+    // $('.mobile .lDate').addClass('greyedOut');
   } else {
-    $('.mobile .holidayIcon').removeClass('greyedOut');
-    $('.mobile .holidayName').removeClass('greyedOut');
-    $('.mobile .eDate').removeClass('greyedOut');
-    $('.mobile .lDate').removeClass('greyedOut');
+    $('.mobile.thanksgiving').removeClass('greyedOut');
+    // $('.mobile .holidayIcon').removeClass('greyedOut');
+    // $('.mobile .holidayName').removeClass('greyedOut');
+    // $('.mobile .eDate').removeClass('greyedOut');
+    // $('.mobile .lDate').removeClass('greyedOut');
   }
 }
 
